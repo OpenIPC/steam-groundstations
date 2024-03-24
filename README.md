@@ -3,19 +3,21 @@ OpenIPC Steam Deck Groundstation
 
 ## Table of contents
 Overview
-installing OpenIPC software on camera module
-- Setup viable majestic configuration
-- Setup viable wfb_ng configuration
+
+Installing OpenIPC software on camera module
+
 Unlocking Steam Deck & installing dependencies
-- unlock rootfs
-- unlocking 70hz screen
+
 Acquiring/compiling wfb_ng binaries & libraries
+
 Share key pairs betsween gs/drone
+
 Launch gst-launch1.0 command to decode stream
+
 Streamline usage on Steam Deck
-- Launch in Desktop Mode
-- Launch in Game Mode
+
 Latency test methodology & result
+
 TODO
 
 ## Overview
@@ -40,6 +42,24 @@ gs
 ### Supported and/or tested devices
 Steam Deck LCD with rtl8822ce
 ssc338q+imx415 (NOR16MB)
+
+## Installing OpenIPC software on camera module
+- Setup viable majestic configuration
+- Setup viable wfb_ng configuration
+
+## Unlocking Steam Deck & installing dependencies
+- unlock rootfs
+- unlocking 70hz screen
+- 
+## Acquiring/compiling wfb_ng binaries & libraries
+
+## Share key pairs betsween gs/drone
+
+## Launch gst-launch1.0 command to decode stream
+
+## Streamline usage on Steam Deck
+- Launch in Desktop Mode
+- Launch in Game Mode
 
 ## Latency test methodology & result
 100hz external monitor
