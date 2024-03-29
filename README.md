@@ -68,7 +68,16 @@ wifibroadcast
 |FPV 3|SD|ssc338q+imx415|Drone@rtl8812au->GS@rtl8812bu|1280x720|90|Asus 100hz|x1|x2|x3|x4|x5|avg|
 |FPV 4|SD|ssc338q+imx415|Drone@rtl8812au->GS@rtl8812bu|1280x720|90|Arzopa Z1FC 144hz|x1|x2|x3|x4|x5|avg|
 
-## Command library & explanation
+## Resources, Command library & explanation
+https://github.com/OpenIPC/wiki/blob/master/en/gpio-settings.md
+gpio set/clear/toggle 23/24
+https://github.com/OpenIPC/mavfwd
+https://github.com/OpenIPC/wiki/blob/master/en/fpv-step-by-step-guide.md
+https://openipc.org/majestic-endpoints
+
+https://wiki.archlinux.org/title/Arch_User_Repository
+https://aur.archlinux.org/packages/qgroundcontrol
+
 pacman -S
 ...
 iwconfig
