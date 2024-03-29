@@ -74,6 +74,7 @@ gpio set/clear/toggle 23/24
 https://github.com/OpenIPC/mavfwd
 https://github.com/OpenIPC/wiki/blob/master/en/fpv-step-by-step-guide.md
 https://openipc.org/majestic-endpoints
+https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html
 
 https://wiki.archlinux.org/title/Arch_User_Repository
 https://aur.archlinux.org/packages/qgroundcontrol
