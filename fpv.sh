@@ -18,9 +18,13 @@ trap "onExit" EXIT
 trap "exit 2" HUP INT QUIT TERM
 
 sudo systemctl stop wifibroadcast@gs
-# sleep 0.1
 
 sudo systemctl start wifibroadcast@gs
-# sleep 0.1
 
-gst-launch-1.0 udpsrc port=5600 buffer-size=65536 ! application/x-rtp, clock-rate=90000, encoding-name=H265 ! rtpjitterbuffer ! rtph265depay ! vaapih265dec ! xvimagesink async=false sync=false
+#Restart gstreamer if it crashes.
+while true
+do
+gst-launch-1.0 udpsrc port=5600 ! tee name=t t. ! queue ! application/x-rtp,payload=97, clock-rate=90000, encoding-name=H265 ! rtpjitterbuffer latency=25 ! rtph265depay ! vaapih265dec ! videoconvert ! videoscale ! videorate ! video/x-raw,framerate=144/1 ! fpsdisplaysink fps-update-interval=200 video-sink=xvimagesink sync=false t. ! queue leaky=1 ! application/x-rtp, payload=98, encoding-name=OPUS ! rtpjitterbuffer latency=25 ! rtpopusdepay ! opusdec ! audioconvert ! audioresample ! jackaudiosink low-latency=true sync=false async=false
+echo "GST crashed with exit code:$?" >> fpv.log
+sleep 1
+done
