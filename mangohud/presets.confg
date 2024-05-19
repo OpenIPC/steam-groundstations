@@ -1,0 +1,32 @@
+##Place in ~/.config/MangoHud/
+##Test with mangohud vkcube
+##Shift between presets with R_Shift+ F10
+
+[preset 1]
+fps
+
+[preset 2]
+legacy_layout=0
+no_small_font
+font_size=32
+horizontal
+horizontal_stretch
+
+battery
+fps
+cpu_stats
+gpu_stats
+frame_count
+
+custom_text="RSSI"
+exec=tail -n 1 /home/deck/MAVLINK/rssi
+
+custom_text="CHAN8"
+exec=tail -n 1 /home/deck/MAVLINK/chan8_raw
+
+
+[preset 3]
+no_display
+
+[preset 4]
+no_display
