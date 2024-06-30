@@ -29,10 +29,8 @@ GK7205V300+IMX335 to be tested
 - Setup viable wfb_ng configuration
 
 ## Unlocking Steam Deck & installing dependencies
-#Set your password using 'passwd'
-#Ulock 70hz: https://github.com/ryanrudolfoba/SteamDeck-RefreshRateUnlocker
-
-
+Set your password using 'passwd'
+Unlock 70hz: https://github.com/ryanrudolfoba/SteamDeck-RefreshRateUnlocker
 sudo steamos-readonly disable
 sudo touch /etc/pacman.d/gnupg/gpg.conf
 sudo bash -lic 'echo "keyserver hkps://keyserver.ubuntu.com" >> /etc/pacman.d/gnupg/gpg.conf'
@@ -56,15 +54,10 @@ sudo cp -rf usr /c
 sudo cp -rf lib/systemd/system/* /lib/systemd/system/
 sudo systemctl daemon-reload
 
-
-#getdefault gs.key
+get default gs.key
 wget https://github.com/OpenIPC/steam-groundstations/blob/master/gs.key
 sudo mv gs.key /etc/
 
-#/usr/lib/python3.11/site-packages/wfb_ng/conf/
-#Make a new config TODO. change manually
-#change wifi_region = '00'
-#change wifi_channel = 161
 #I made the changes and also removed two way link, use this if you want
 wget https://github.com/OpenIPC/steam-groundstations/blob/master/master.cfg
 sudo mv -rf master.cfg /usr/lib/python3.11/site-packages/wfb_ng/conf/
