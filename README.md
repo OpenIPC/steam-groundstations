@@ -29,12 +29,48 @@ GK7205V300+IMX335 to be tested
 - Setup viable wfb_ng configuration
 
 ## Unlocking Steam Deck & installing dependencies
-- unlock rootfs
-- unlocking 70hz screen
-- 
-## Acquiring/compiling wfb_ng binaries & libraries
+#Set your password using 'passwd'
+#Ulock 70hz: https://github.com/ryanrudolfoba/SteamDeck-RefreshRateUnlocker
 
-## Share key pairs betsween gs/drone
+
+sudo steamos-readonly disable
+sudo touch /etc/pacman.d/gnupg/gpg.conf
+sudo bash -lic 'echo "keyserver hkps://keyserver.ubuntu.com" >> /etc/pacman.d/gnupg/gpg.conf'
+sudo pacman-key --init
+sudo pacman-key --populate
+sudo pacman-key --populate archlinux
+sudo pacman-key --refresh-keys
+
+#Development enviroment
+sudo pacman --sync --noconfirm base-devel glibc linux-api-headers libpcap libsodium python-setuptools python-pip python-pyroute2 python-future python-twisted python-pyserial iw  python-virtualenv net-tools python-msgpack
+
+#WFB_ng install
+cd
+git clone https://github.com/svpcom/wfb-ng.git
+cd wfb-ng
+make bdist
+cd dist
+tar -xvf *
+sudo cp -rf etc /
+sudo cp -rf usr /c
+sudo cp -rf lib/systemd/system/* /lib/systemd/system/
+sudo systemctl daemon-reload
+
+
+#getdefault gs.key
+wget https://github.com/OpenIPC/steam-groundstations/blob/master/gs.key
+sudo mv gs.key /etc/
+
+#/usr/lib/python3.11/site-packages/wfb_ng/conf/
+#Make a new config TODO. change manually
+#change wifi_region = '00'
+#change wifi_channel = 161
+#I made the changes and also removed two way link, use this if you want
+wget https://github.com/OpenIPC/steam-groundstations/blob/master/master.cfg
+sudo mv -rf master.cfg /usr/lib/python3.11/site-packages/wfb_ng/conf/
+
+sudo systemctl start wifibroadcast@gs
+sudo systemctl status wifibroadcast@gs
 
 ## Launch gst-launch1.0 command to decode stream
 
