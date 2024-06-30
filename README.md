@@ -64,7 +64,7 @@ tar -xvf *
 
 sudo cp -rf etc /
 
-sudo cp -rf usr /c
+sudo cp -rf usr /
 
 sudo cp -rf lib/systemd/system/* /lib/systemd/system/
 
