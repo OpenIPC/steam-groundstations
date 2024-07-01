@@ -47,8 +47,19 @@ sudo pacman-key --populate archlinux
 
 sudo pacman-key --refresh-keys
 
-sudo pacman --sync --noconfirm base-devel glibc linux-api-headers libpcap libsodium python-setuptools python-pip python-pyroute2 python-future python-
-twisted python-pyserial iw  python-virtualenv net-tools python-msgpack
+sudo pacman --sync --noconfirm base-devel glibc linux-api-headers libpcap libsodium python-setuptools python-pip python-pyroute2 python-future python-twisted python-pyserial iw  python-virtualenv net-tools python-msgpack bc linux-neptune-61 linux-neptune-61-headers dkms
+
+#build rtl8812au
+cd
+
+git clone https://github.com/svpcom/rtl8812au.git
+
+cd rtl8812au
+
+make
+
+sudo ./dkms-install.sh
+
 
 cd
 
