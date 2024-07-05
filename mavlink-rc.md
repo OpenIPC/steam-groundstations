@@ -4,7 +4,7 @@ For OpenIPC applications
 ## Overview
 Mavfwd and the established mavlink setup works well when using a flightcontroller(FC) to connect to an compatible OpenIPC FPV board like ssc338q or ssc30kq. This is used both for On screen display (OSD) functionality and to send commands to the OpenIPC system, for example to change resolution, bitrate or datalink options.
 But if there is no flightcontroller to send mavlink data there can be no control of the OpenIPC board or OSD (at this moment at least).
-THis is where a recent development project mavlink-rc (https://github.com/ExpressLRS/Docs/pull/394) becomes interesting.
+This is where a recent development project mavlink-rc (https://github.com/ExpressLRS/Docs/pull/394) becomes interesting.
 It promises bi-directional mavlink over a standard ELRS link, which becomes even more useful if yopu are using INAV or Ardupilot software.
 In my setup I used a Radiomaster Boxer (TX+backpack), Radiomaster ER6 PWM reciever (RX) and ssc30kq (OpenIPC FPV system).
 
