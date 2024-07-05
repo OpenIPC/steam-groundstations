@@ -87,7 +87,7 @@ wget https://github.com/OpenIPC/steam-groundstations/raw/master/gs.key
 
 sudo mv gs.key /etc/
 
-wget [https://github.com/OpenIPC/steam-groundstations/blob/master/master.cfg](https://github.com/OpenIPC/steam-groundstations/raw/master/master.cfg)
+wget https://github.com/OpenIPC/steam-groundstations/raw/master/master.cfg
 
 sudo mv -rf master.cfg /usr/lib/python3.11/site-packages/wfb_ng/conf/
 
