@@ -96,36 +96,10 @@ sudo systemctl start wifibroadcast@gs
 sudo systemctl status wifibroadcast@gs
 
 ## Launch gst-launch1.0 command to decode stream
+fpv.sh contains some examples of helper functions for launching gstreamer directly from Steam gamemode. The gstreamer command will work with both audio and video.
 
 ## Streamline usage on Steam Deck
-- Launch in Desktop Mode
-- Launch in Game Mode
-
-## Latency test methodology & result
-### Equipment
-144hz arzopa portable monitor https://www.arzopa.com/products/z1fc-16-1-fhd-144hz-portable-monitor
-100hz Asus external monitor
-70hz overclocked Steam Deck LCD
-60hz Steam Deck LCD 
-Samsung S22 SUPERSLOWMO capture (960fps according to samsung)
-OpenIPC high resolution timer (https://openipc.org/tools/high-resolution-timer)
-### Settings
-majestic.yaml
-iq.ini
-imx415_fpv.bin
-wifibroadcast
-
-### Test schedule
-|Test description|GS|CAM|WiFi|Resolution|FPS|Monitor&HZ|Frame1|Frame2|Frame3|Frame4|Frame5|AVG|
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Nice resolution 1|SD|ssc338q+imx415|Drone@rtl8812au->GS@rtl8812bu|1920x1080|30|Steamdeck 60hz|x1|x2|x3|x4|x5|avg|
-|Nice resolution 2|SD|ssc338q+imx415|Drone@rtl8812au->GS@rtl8812bu|1920x1080|30|Steamdeck 70hz|x1|x2|x3|x4|x5|avg|
-|Nice resolution 3|SD|ssc338q+imx415|Drone@rtl8812au->GS@rtl8812bu|1920x1080|60|Asus 100hz 60hz|x1|x2|x3|x4|x5|avg|
-|Nice resolution 4|SD|ssc338q+imx415|Drone@rtl8812au->GS@rtl8812bu|1920x1080|60|Arzopa Z1FC 144hz|x1|x2|x3|x4|x5|avg|
-|FPV 1|SD|ssc338q+imx415|Drone@rtl8812au->GS@rtl8812bu|1280x720|90|Steamdeck 60hz|x1|x2|x3|x4|x5|avg|
-|FPV 2|SD|ssc338q+imx415|Drone@rtl8812au->GS@rtl8812bu|1280x720|90|Steamdeck 70hz|x1|x2|x3|x4|x5|avg|
-|FPV 3|SD|ssc338q+imx415|Drone@rtl8812au->GS@rtl8812bu|1280x720|90|Asus 100hz|x1|x2|x3|x4|x5|avg|
-|FPV 4|SD|ssc338q+imx415|Drone@rtl8812au->GS@rtl8812bu|1280x720|90|Arzopa Z1FC 144hz|x1|x2|x3|x4|x5|avg|
+How to add a non-steam game to steam deck: https://www.dexerto.com/tech/how-to-add-non-steam-games-to-steam-deck-2082992/
 
 ## Resources, Command library & explanation
 https://github.com/OpenIPC/wiki/blob/master/en/gpio-settings.md
@@ -137,24 +111,4 @@ https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/downloa
 
 https://wiki.archlinux.org/title/Arch_User_Repository
 https://aur.archlinux.org/packages/qgroundcontrol
-
-pacman -S
-...
-iwconfig
-...
-ifconfig
-...
-nw
-...
-systemctl
-daemon-reload
-start/stop wifibroadcast@gs
-...
-wfb-cli gs
-
-## TODO
-Include the option to use external USB rtl8812au network card
-Connect directional antenna (Eachine Stingpad) to steamdeck network card (will not do this, but theoretically possible)
-Create script to facilitate wfb_ng installation
-Someone need to test on OLED Steam Deck
 
