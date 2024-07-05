@@ -83,7 +83,7 @@ sudo systemctl daemon-reload
 
 get default gs.key
 
-wget https://github.com/OpenIPC/steam-groundstations/blob/master/gs.key
+wget https://github.com/OpenIPC/steam-groundstations/raw/master/gs.key
 
 sudo mv gs.key /etc/
 
