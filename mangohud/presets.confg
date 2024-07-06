@@ -1,32 +1,51 @@
-##Place in ~/.config/MangoHud/
-##Test with mangohud vkcube
-##Shift between presets with R_Shift+ F10
-
 [preset 1]
-fps
-
-[preset 2]
 legacy_layout=0
+
+text_color=FFA500
+background_alpha=0.4
+alpha=1
+position=bottom-center
+
 no_small_font
-font_size=32
-horizontal
-horizontal_stretch
+font_size=24
+font_scale=1
+width=500
 
-battery
-fps
-cpu_stats
-gpu_stats
+exec_name=Wlan0_ANT0
+exec=tail -10 wfb_text | grep "An3 " | tail -1
+exec_name=Wlan0_ANT1
+exec=tail -10 wfb_text | grep "An4 " | tail -1
+exec_name=Wlan1_ANT0
+exec=tail -10 wfb_text | grep "An5 " | tail -1
+exec_name=Wlan1_ANT1
+exec=tail -10 wfb_text | grep "An6 " | tail -1
+exec_name=Wlan2_ANT0
+exec=tail -10 wfb_text | grep "An7 " | tail -1
+exec_name=Wlan2_ANT1
+exec=tail -10 wfb_text | grep "An8 " | tail -1
+
+
+frame_timing
+frametime
 frame_count
+#dynamic_frame_timing
+#frametime_color
+fps
 
-custom_text="RSSI"
-exec=tail -n 1 /home/deck/MAVLINK/rssi
+#retro
+#height=2000
+#text_color=FF007B
+#frametime_color=FFA500
+#background_color=FFA500
+#frame_timing
 
-custom_text="CHAN8"
-exec=tail -n 1 /home/deck/MAVLINK/chan8_raw
-
-
-[preset 3]
-no_display
-
-[preset 4]
-no_display
+#offset_x = 480
+#offset_y = 600
+#fps_limit_method=late
+#frame_timing
+#frame_count
+#fps
+#cpu_stats=0
+#dynamic_frame_timing
+#exec=sudo ./wifi-wlan0.py | tail -1
+#frametime
