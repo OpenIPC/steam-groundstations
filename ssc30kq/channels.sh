@@ -1,14 +1,18 @@
 #!/bin/sh
+#use the script by calling for example ./channels 8 1000
 
 
-if [ $2 -lt 1020 ];then
+if [[ $2 -lt 1020 ]];then
 	iw dev wlan0 set txpower fixed 500
+	sleep 0.2
 
 elif [ $2 -gt 1050 ] && [ $2 -lt 1070 ];then
-	iw dev wlan0 set txpower fixed 2000
+	#iw dev wlan0 set txpower fixed 2000
+	sleep 0.2
 
 elif [ $2 -gt 1110 ] && [ $2 -lt 1130 ];then
-	iw dev wlan0 set txpower fixed 2250
+	#iw dev wlan0 set txpower fixed 2250
+	sleep 0.2
 
 # ----------------------------------------------
 
@@ -72,42 +76,42 @@ elif [ $2 -gt 1800 ] && [ $2 -lt 1850 ];then
 
 
 elif [ $2 -gt 1870 ] && [ $2 -lt 1900 ];then
-	kill -9 $(pidof wfb_tx)
-	sed -i 's/^mcs_index=.*/mcs_index='1'/' /etc/wfb.conf	
-	wifibroadcast start
-	sleep 0.2
-	yaml-cli -s .video0.size 1456x816
-	yaml-cli -s .video0.gopSize 0.25
-	yaml-cli -s .video0.fps 90
-	yaml-cli -s .video0.bitrate 8192
-	yaml-cli -s .isp.exposure 7
-	killall -1 majestic
+#	kill -9 $(pidof wfb_tx)
+#	sed -i 's/^mcs_index=.*/mcs_index='1'/' /etc/wfb.conf
+#	wifibroadcast start
+#	sleep 0.2
+#	yaml-cli -s .video0.size 1456x816
+#	yaml-cli -s .video0.gopSize 0.25
+#	yaml-cli -s .video0.fps 90
+#	yaml-cli -s .video0.bitrate 8192
+#	yaml-cli -s .isp.exposure 7
+#	killall -1 majestic
 	sleep 0.2
 
 elif [ $2 -gt 1920 ] && [ $2 -lt 1960 ];then
-	kill -9 $(pidof wfb_tx)
-	sed -i 's/^mcs_index=.*/mcs_index='3'/' /etc/wfb.conf	
-	wifibroadcast start
-	sleep 0.2
-	yaml-cli -s .video0.size 1456x816
-	yaml-cli -s .video0.gopSize 1
-	yaml-cli -s .video0.fps 90
-	yaml-cli -s .video0.bitrate 12384
-	yaml-cli -s .isp.exposure 7
-	killall -1 majestic
+#	kill -9 $(pidof wfb_tx)
+#	sed -i 's/^mcs_index=.*/mcs_index='3'/' /etc/wfb.conf
+#	wifibroadcast start
+#	sleep 0.2
+#	yaml-cli -s .video0.size 1456x816
+#	yaml-cli -s .video0.gopSize 1
+#	yaml-cli -s .video0.fps 90
+#	yaml-cli -s .video0.bitrate 12384
+#	yaml-cli -s .isp.exposure 7
+#	killall -1 majestic
 	sleep 0.2
 
 elif [ $2 -gt 1980 ];then
-	kill -9 $(pidof wfb_tx)
-	sed -i 's/^mcs_index=.*/mcs_index='4'/' /etc/wfb.conf	
-	wifibroadcast start
-	sleep 0.2
-	yaml-cli -s .video0.size 1456x816
-	yaml-cli -s .video0.gopSize 1
-	yaml-cli -s .video0.fps 90
-	yaml-cli -s .video0.bitrate 14262
-	yaml-cli -s .isp.exposure 7
-	killall -1 majestic
+#	kill -9 $(pidof wfb_tx)
+#	sed -i 's/^mcs_index=.*/mcs_index='4'/' /etc/wfb.conf
+#	wifibroadcast start
+#	sleep 0.2
+#	yaml-cli -s .video0.size 1456x816
+#	yaml-cli -s .video0.gopSize 1
+#	yaml-cli -s .video0.fps 90
+#	yaml-cli -s .video0.bitrate 14262
+#	yaml-cli -s .isp.exposure 7
+#	killall -1 majestic
 	sleep 0.2
 	
 fi
