@@ -1,0 +1,34 @@
+kernel/fs/nfs_common/grace.ko:
+kernel/fs/nfs/nfs.ko: kernel/fs/lockd/lockd.ko kernel/fs/nfs_common/grace.ko kernel/net/sunrpc/sunrpc.ko
+kernel/fs/nfs/nfsv3.ko: kernel/fs/nfs/nfs.ko kernel/fs/lockd/lockd.ko kernel/fs/nfs_common/grace.ko kernel/net/sunrpc/sunrpc.ko
+kernel/fs/lockd/lockd.ko: kernel/fs/nfs_common/grace.ko kernel/net/sunrpc/sunrpc.ko
+kernel/crypto/echainiv.ko:
+kernel/drivers/sstar/crypto/cryptodev/cryptodev.ko:
+kernel/net/wireless/cfg80211.ko:
+kernel/net/sunrpc/sunrpc.ko:
+sigmastar/mi_shadow.ko: sigmastar/mi_sys.ko sigmastar/mhal.ko sigmastar/mi_common.ko
+sigmastar/mi_sys.ko: sigmastar/mhal.ko sigmastar/mi_common.ko
+sigmastar/mi_ldc.ko: sigmastar/mi_rgn.ko sigmastar/mi_sys.ko sigmastar/mhal.ko sigmastar/mi_common.ko
+sigmastar/mi_common.ko:
+sigmastar/sensor_sc8235_mipi.ko: sigmastar/mhal.ko
+sigmastar/mi_sensor.ko: sigmastar/mi_sys.ko sigmastar/mhal.ko sigmastar/mi_common.ko
+sigmastar/mi_rgn.ko: sigmastar/mi_sys.ko sigmastar/mhal.ko sigmastar/mi_common.ko
+sigmastar/mhal.ko:
+sigmastar/mi_ao.ko: sigmastar/mi_sys.ko sigmastar/mhal.ko sigmastar/mi_common.ko
+sigmastar/mi_venc.ko: sigmastar/mi_sys.ko sigmastar/mhal.ko sigmastar/mi_common.ko
+sigmastar/sensor_gc4653_mipi.ko: sigmastar/mhal.ko
+sigmastar/mi_vif.ko: sigmastar/mi_sys.ko sigmastar/mhal.ko sigmastar/mi_common.ko
+sigmastar/sensor_imx415_mipi.ko: sigmastar/mhal.ko
+sigmastar/mi_ai.ko: sigmastar/mi_sys.ko sigmastar/mhal.ko sigmastar/mi_common.ko
+extra/8812eu.ko: kernel/net/wireless/cfg80211.ko
+sigmastar/mi_divp.ko: sigmastar/mi_rgn.ko sigmastar/mi_sys.ko sigmastar/mhal.ko sigmastar/mi_common.ko
+sigmastar/sensor_config.ko: sigmastar/mhal.ko
+sigmastar/sensor_imx347_mipi.ko: sigmastar/mhal.ko
+sigmastar/sensor_sc501ai_mipi.ko: sigmastar/mhal.ko
+sigmastar/mi_vpe.ko: sigmastar/mi_ldc.ko sigmastar/mi_rgn.ko sigmastar/mi_sys.ko sigmastar/mhal.ko sigmastar/mi_common.ko
+extra/88XXau.ko: kernel/net/wireless/cfg80211.ko
+sigmastar/mi_mipitx.ko: sigmastar/mi_sys.ko sigmastar/mhal.ko sigmastar/mi_common.ko
+sigmastar/sensor_imx307_mipi.ko: sigmastar/mhal.ko
+sigmastar/sensor_imx335_mipi.ko: sigmastar/mhal.ko
+sigmastar/sensor_gc2053_mipi.ko: sigmastar/mhal.ko
+extra/exfat.ko:
