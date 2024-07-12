@@ -16,3 +16,4 @@ It took me 2-3hours from start to finish to get mavlink data on my ssc30kq, but 
 ## Things to be aware of
 You need tipomans updated "mavfwd". This is standard on ssc338q but not on ssc30kq. Change baudrate to 460800 and make sure you enable all relevant telemetry/datalink/mavlink options.
 When the ELRS people write "you need to change the baud to 460", they actually mean 460800. Well its obvious now.
+http://docs.senk0.com/software/mavlink/#rc-interleaving
