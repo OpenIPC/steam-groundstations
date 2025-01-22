@@ -47,7 +47,8 @@ sudo pacman-key --populate archlinux
 
 sudo pacman-key --refresh-keys
 
-sudo pacman --sync --noconfirm base-devel glibc linux-api-headers libpcap libsodium python-setuptools python-pip python-pyroute2 python-future python-twisted python-pyserial iw  python-virtualenv net-tools python-msgpack bc linux-neptune-61 linux-neptune-61-headers dkms
+sudo pacman --sync --noconfirm base-devel glibc linux-api-headers libpcap libsodium python-setuptools python-pip python-pyroute2 python-future python-twisted python-pyserial iw  python-virtualenv net-tools python-msgpack bc linux-neptune-65 linux-neptune-65-headers dkms
+#linux-neptune-61 linux-neptune-61-headers replaced 2025-01-22
 
 #build rtl8812au
 cd
